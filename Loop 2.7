@@ -1,0 +1,24 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main() {
+	int count = 0;
+	double a, s = 0, k = 0;
+	while (cin >> a) {
+		count++;
+		if (a < 0) {
+			break;
+		}
+		if (count % 2 != 0) {
+			s += -a / count;
+		}
+		if (count % 2 == 0) {
+			s += a / count;
+		}
+	}
+	cout << fixed << setprecision(6);
+	cout << s;
+
+}

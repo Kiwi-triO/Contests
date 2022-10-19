@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	int n;
+	double fir = 0.1, sec = 0.2, res = 0;
+	cin >> n;
+	if (n == 1 || n == 2) cout << fir;
+	else if (n == 3) cout << sec;
+	else {
+		for (int i = 3; i < n; i++) {
+			res = fir + sec;
+			fir = sec;
+			sec = res;
+		}
+		cout << res;
+	}
+}

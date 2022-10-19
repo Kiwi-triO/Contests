@@ -1,0 +1,20 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+    int fir = 1, sec = 1, z = 1;
+    if (a == 1) {
+        cout << 1 << " ";
+        a += 1;
+    }
+
+    do {
+        if ((z >= a) && (z <= b)) cout << z << " ";
+        z = fir + sec;
+        fir = sec;
+        sec = z;
+    } while (z <= b);
+}
